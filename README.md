@@ -1,2 +1,5 @@
 # aepwd
-Power work directory but ae
+Power work directory but ae. Use:
+```
+./aepwd
+```
