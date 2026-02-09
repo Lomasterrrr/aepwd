@@ -20,9 +20,12 @@
 #include <string.h>
 #include <unistd.h>
 
+#include "config.h"
+
 static inline void
 aeframe(char *txt, bool direct)
 {
+#if AEMODE == 1
 	ssize_t n = strlen(txt) - 1;
 	if (n < 1)
 		return;
@@ -33,6 +36,7 @@ aeframe(char *txt, bool direct)
 	if (!direct)
 		putchar('A');
 	putchar('\n');
+#endif
 }
 
 int
